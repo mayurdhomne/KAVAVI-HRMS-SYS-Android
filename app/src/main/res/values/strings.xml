@@ -1,10 +1,250 @@
 <resources>
     <string name="app_name">Clustor Computing</string>
-    <!-- Strings used for fragments for navigation -->
+    
+    <!-- Authentication -->
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="use_biometric">Use Biometric Login</string>
+    <string name="login_with_fingerprint">Login with Fingerprint</string>
+    <string name="biometric_authentication">Biometric Authentication</string>
+    <string name="authenticate_using_biometric">Authenticate using your fingerprint or face</string>
+    
+    <!-- Navigation -->
+    <string name="dashboard">Dashboard</string>
+    <string name="attendance">Attendance</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    
+    <!-- History -->
+    <string name="attendance_history">Attendance History</string>
+    <string name="export">Export</string>
+    <string name="monthly_summary">Monthly Summary</string>
+    <string name="attendance_rate">Attendance Rate</string>
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="late">Late</string>
+    <string name="total_hours">Total Hours</string>
+    <string name="avg_daily">Avg Daily</string>
+    <string name="filters">Filters</string>
+    <string name="clear_all">Clear All</string>
+    <string name="status">Status</string>
+    <string name="time_period">Time Period</string>
+    <string name="select_date_range">Select Date Range</string>
+    <string name="no_data">No Data</string>
+    <string name="no_attendance_records">No Attendance Records</string>
+    <string name="no_records_description">Your attendance records will appear here once you start marking attendance</string>
+    <string name="attendance_details">Attendance Details</string>
+    <string name="records_found">%d records found</string>
+    <string name="all">All</string>
+    <string name="half_day">Half Day</string>
+    <string name="all_time">All Time</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month1">This Month</string>
+    <string name="last_month">Last Month</string>
+    <string name="export_feature_coming_soon">Export feature coming soon</string>
+    <string name="failed_to_export_data">Failed to export data</string>
+    <string name="date_label">Date:</string>
+    <string name="status_label">Status:</string>
+    <string name="check_in_label">Check In:</string>
+    <string name="check_out_label">Check Out:</string>
+    <string name="working_hours_label">Working Hours:</string>
+    <string name="notes_label">Notes:</string>
+    <string name="emergency_check_in_label">Emergency Check-in:</string>
+    <string name="sync_status_label">Sync Status:</string>
+    <string name="pending">Pending</string>
+    
+    <!-- Dashboard -->
+    <string name="welcome_back">Welcome back</string>
+    <string name="today_attendance">Today\'s Attendance</string>
+    <string name="check_in">Check In</string>
+    <string name="check_out">Check Out</string>
+    <string name="working_hours">Working Hours</string>
+    <string name="attendance_summary">Attendance Summary</string>
+    <string name="this_month">This Month</string>
+    <string name="present_days">Present Days</string>
+    <string name="absent_days">Absent Days</string>
+    <string name="late_days">Late Days</string>
+    <string name="half_days">Half Days</string>
+    
+    <!-- Attendance -->
+    <string name="mark_attendance">Mark Attendance</string>
+    <string name="location_verified">Location Verified</string>
+    <string name="location_not_verified">Location Not Verified</string>
+    <string name="emergency_check_in">Emergency Check-in</string>
+    <string name="current_location">Current Location</string>
+    <string name="office_location">Office Location</string>
+    <string name="distance_from_office">Distance from office</string>
+    
+    <!-- Profile -->
+    <string name="employee_id">Employee ID</string>
+    <string name="department">Department</string>
+    <string name="designation">Designation</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Security -->
+    <string name="security_status">Security Status</string>
+    <string name="security_alerts">Security Alerts</string>
+    <string name="run_security_check">Run Security Check</string>
+    <string name="refresh">Refresh</string>
+    <string name="secure">Secure</string>
+    <string name="warning">Warning</string>
+    <string name="critical">Critical</string>
+    <string name="security_violation">Security Violation</string>
+    <string name="security_warning">Security Warning</string>
+    <string name="critical_alert">Critical Alert</string>
+    
+    <!-- Settings -->
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="notifications">Notifications</string>
+    <string name="privacy">Privacy</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="system_default">System Default</string>
+    
+    <!-- Notification Settings -->
+    <string name="notification_settings">Notification Settings</string>
+    <string name="system_notifications">System Notifications</string>
+    <string name="system_notification_status">System notification status</string>
+    <string name="system_notifications_disabled_warning">System notifications are disabled. You may miss important reminders. Tap Settings to enable.</string>
+    <string name="check_in_reminders">Check-in Reminders</string>
+    <string name="check_in_reminders_description">Get reminded to check in at the start of your workday</string>
+    <string name="check_out_reminders">Check-out Reminders</string>
+    <string name="check_out_reminders_description">Get reminded to check out at the end of your workday</string>
+    <string name="daily_summary">Daily Summary</string>
+    <string name="daily_summary_description">Receive a daily summary of your attendance and working hours</string>
+    <string name="other_reminders">Other Reminders</string>
+    <string name="biometric_reminders">Biometric Reminders</string>
+    <string name="biometric_reminders_description">Remind to use biometric authentication when available</string>
+    <string name="location_reminders">Location Reminders</string>
+    <string name="location_reminders_description">Get notified when you enter or leave office premises</string>
+    <string name="actions">Actions</string>
+    <string name="test_notification">Test Notification</string>
+    <string name="reset_to_defaults">Reset to Defaults</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="check_in_reminder_test">Check-in Reminder</string>
+    <string name="check_out_reminder_test">Check-out Reminder</string>
+    <string name="sync_complete_test">Sync Complete</string>
+    <string name="location_alert_test">Location Alert</string>
+    <string name="daily_summary_test">Daily Summary</string>
+    <string name="reset_confirmation_title">Reset to Defaults</string>
+    <string name="reset_confirmation_message">This will reset all notification settings to their default values. Are you sure?</string>
+    <string name="reset">Reset</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="retry">Retry</string>
+    <string name="loading">Loading…</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="close">Close</string>
+    
+    <!-- Error Messages -->
+    <string name="error_login_failed">Login failed. Please check your credentials.</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_location_permission">Location permission required for attendance marking.</string>
+    <string name="error_biometric_not_available">Biometric authentication not available.</string>
+    <string name="error_location_not_found">Unable to get current location.</string>
+    <string name="error_camera_permission">Camera permission required.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    
+    <!-- Success Messages -->
+    <string name="success_check_in">Successfully checked in!</string>
+    <string name="success_check_out">Successfully checked out!</string>
+    <string name="success_profile_updated">Profile updated successfully!</string>
+    <string name="success_logout">Logged out successfully!</string>
+    
+    <!-- Accessibility -->
+    <string name="splash_logo">Splash Logo</string>
+    <string name="user_avatar">User Avatar</string>
+    <string name="security_status_icon">Security Status Icon</string>
+    <string name="alert_severity_icon">Alert Severity Icon</string>
+    <string name="navigation_icon">Navigation Icon</string>
+    <string name="menu_icon">Menu Icon</string>
+    <string name="back_button">Back Button</string>
+    <string name="search_icon">Search Icon</string>
+    <string name="filter_icon">Filter Icon</string>
+    <string name="camera_capture">Camera Capture</string>
+    <string name="location_icon">Location Icon</string>
+    
+    <!-- Sync Status Fragment -->
+    <string name="sync_status">Sync Status</string>
+    <string name="connection_status">Connection Status</string>
+    <string name="offline_mode">Offline Mode</string>
+    <string name="offline_mode_description">Work offline and sync data when connection is available</string>
+    <string name="last_sync">Last Sync</string>
+    <string name="sync_now">Sync Now</string>
+    <string name="offline_data_stats">Offline Data Statistics</string>
+    <string name="total_records">Total Records</string>
+    <string name="unsynced">Unsynced</string>
+    <string name="pending_sync">Pending Sync</string>
+    <string name="storage_usage">Storage Usage</string>
+    <string name="clear_offline_data">Clear Offline Data</string>
+    
+    <!-- Theme Settings Fragment -->
+    <string name="theme_settings">Theme Settings</string>
+    <string name="current_theme">Current Theme</string>
+    <string name="active_theme">Active Theme</string>
+    <string name="change_theme">Change Theme</string>
+    <string name="theme_preview">Theme Preview</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="light_theme_description">Bright and clean interface for better visibility in daylight</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="dark_theme_description">Easy on the eyes with reduced battery consumption</string>
+    <string name="system_theme_description">Automatically follows your device settings</string>
+    <string name="auto_theme">Auto Theme</string>
+    <string name="auto_theme_based_on_battery">Auto Dark Theme on Low Battery</string>
+    <string name="auto_theme_description">Automatically switch to dark theme when battery is low</string>
+    <string name="system_information">System Information</string>
+    <string name="reset_to_system_default">Reset to System Default</string>
+    
+    <!-- Item Attendance History -->
+    <string name="status_icon">Status Icon</string>
+    <string name="emergency_checkin">Emergency Check-in</string>
+    <string name="sync_pending">Sync Pending</string>
+    <string name="has_notes">Has Notes</string>
+    <string name="biometric_verified">Biometric Verified</string>
+    
+    <!-- Emergency Check-in Activity -->
+    <string name="emergency_check_in_title">Emergency Check-in</string>
+    <string name="toggle_flash">Toggle Flash</string>
+    <string name="capture_photo">Capture Photo</string>
+    <string name="switch_camera">Switch Camera</string>
+    <string name="photo_preview">Photo Preview</string>
+    <string name="captured_photo">Captured Photo</string>
+    <string name="retake_photo">Retake Photo</string>
+    <string name="emergency_reason">Emergency Reason</string>
+    <string name="illness">Illness</string>
+    <string name="family_emergency">Family Emergency</string>
+    <string name="traffic_issue">Traffic Issue</string>
+    <string name="technical_issue">Technical Issue</string>
+    <string name="other">Other</string>
+    <string name="additional_notes">Additional Notes</string>
+    <string name="optional_field">Optional</string>
+    <string name="submit_emergency_check_in">Submit Emergency Check-in</string>
+    
+    <!-- Legacy strings -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="splash_logo">Splash Logo</string>
-
 </resources>

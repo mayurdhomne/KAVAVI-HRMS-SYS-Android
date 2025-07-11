@@ -76,6 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email Address"
+                    app:boxStrokeWidth="1dp"
                     app:startIconDrawable="@drawable/mail_24px"
                     app:startIconTint="@color/accent_color"
                     app:boxStrokeColor="@color/primary_color"
@@ -179,6 +180,7 @@
                     app:strokeWidth="2dp"
                     app:cornerRadius="12dp"
                     app:icon="@drawable/ic_fingerprint"
+                    app:iconSize="24dp"
                     app:iconTint="@color/primary_color"
                     app:iconGravity="textStart" />
 

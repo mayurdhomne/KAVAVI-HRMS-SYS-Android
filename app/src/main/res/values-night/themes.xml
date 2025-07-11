@@ -1,29 +1,71 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.ClustorComputing" parent="Theme.MaterialComponents.Light.NoActionBar">
-
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowSoftInputMode">adjustResize</item>
-        <!-- Customize your light theme here. -->
-        <!-- Remove or override the colorPrimary if it's not needed -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
-        <!-- Set Background Color -->
-        <item name="android:windowBackground">@android:color/white</item> <!-- Change to desired color -->
-
-        <!-- Set Status Bar Color -->
-        <item name="android:statusBarColor">@color/colorAccent</item>
-
-        <!-- Optional: Set Navigation Bar Color -->
-        <item name="android:navigationBarColor">@color/colorAccent</item>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Theme -->
+    <style name="Theme.ClustorComputing" parent="Theme.Material3.DayNight">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_variant_color</item>
+        <item name="colorOnPrimary">@color/button_text_primary</item>
+        
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/accent_color</item>
+        <item name="colorSecondaryVariant">@color/accent_color</item>
+        <item name="colorOnSecondary">@color/button_text_secondary</item>
+        
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/background_color</item>
+        <item name="colorSurface">@color/surface_color</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        
+        <!-- Error color -->
+        <item name="colorError">@color/error_color</item>
+        <item name="colorOnError">@color/button_text_primary</item>
+        
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/background_color</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/navigation_background</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/background_color</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        
+        <!-- Material card background -->
+        <item name="colorSurfaceVariant">@color/card_background</item>
+        
+        <!-- Ripple effect -->
+        <item name="android:colorControlHighlight">@color/ripple_color</item>
     </style>
 
-    <style name="BottomSheetTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+    <!-- Base theme for splash screen -->
+    <style name="Base.Theme.ClustorComputing" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_variant_color</item>
+        <item name="colorOnPrimary">@color/button_text_primary</item>
+        <item name="android:colorBackground">@color/background_color</item>
+        <item name="android:statusBarColor">@color/background_color</item>
+        <item name="android:navigationBarColor">@color/background_color</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- Bottom Sheet Theme for Dark Mode -->
+    <style name="BottomSheetTheme" parent="Theme.Material3.DayNight.BottomSheetDialog">
         <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="colorSurface">@color/surface_color</item>
+        <item name="colorOnSurface">@color/text_primary</item>
         <item name="shapeAppearanceOverlay">@style/CustomBottomSheetShape</item>
     </style>
 
-    <style name="CustomBottomSheetShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+    <style name="CustomBottomSheetShape" parent="ShapeAppearance.Material3.LargeComponent">
         <item name="cornerSize">24dp</item>
     </style>
 

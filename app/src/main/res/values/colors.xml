@@ -23,16 +23,34 @@
     <color name="text_secondary_light">#757575</color>
     <color name="text_secondary_dark">#B0B0B0</color>
     
+    <!-- Dynamic color aliases -->
+    <color name="background_color">@color/background_light</color>
+    <color name="surface_color">@color/surface_light</color>
+    <color name="text_primary">@color/text_primary_light</color>
+    <color name="text_secondary">@color/text_secondary_light</color>
+    
     <!-- Status colors -->
     <color name="success_color">#4CAF50</color>
+    <color name="success_light">#E8F5E8</color>
     <color name="error_color">#F44336</color>
+    <color name="error_light">#FFEBEE</color>
     <color name="warning_color">#FF9800</color>
+    <color name="warning_light">#FFF3E0</color>
+    <color name="warning_background">#FFF8E1</color>
     <color name="info_color">#2196F3</color>
+    <color name="info_light">#E3F2FD</color>
+    <color name="critical_color">#D32F2F</color>
+    <color name="critical_light">#FFCDD2</color>
     
     <!-- Attendance status colors -->
     <color name="present_color">#4CAF50</color>
     <color name="absent_color">#F44336</color>
     <color name="late_color">#FF9800</color>
     <color name="half_day_color">#9C27B0</color>
+    
+    <!-- UI element colors -->
+    <color name="divider_color">#E0E0E0</color>
+    <color name="ripple_color">#1F000000</color>
+    <color name="camera_controls_background">#80000000</color>
 
 </resources>

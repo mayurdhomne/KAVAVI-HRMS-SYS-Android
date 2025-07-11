@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
-    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -28,16 +28,13 @@ android {
             )
         }
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
     kotlinOptions {
         jvmTarget = "11"
     }
-
     buildFeatures {
         viewBinding = true
     }
@@ -63,7 +60,7 @@ dependencies {
     // Room Database
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    kapt(libs.room.compiler)
+    ksp(libs.room.compiler)
 
     // Lifecycle & ViewModels
     implementation(libs.lifecycle.viewmodel)
@@ -90,6 +87,9 @@ dependencies {
     // Image Loading
     implementation(libs.glide)
 
+    //Refresh Layout
+    implementation(libs.androidx.swiperefreshlayout)
+
     // WorkManager
     implementation(libs.work.runtime)
 
@@ -99,7 +99,7 @@ dependencies {
 
     // Dependency Injection
     implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
     // Testing
     testImplementation(libs.junit)

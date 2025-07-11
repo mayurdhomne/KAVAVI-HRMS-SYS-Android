@@ -7,6 +7,13 @@ import com.hrms.clustorcomputing.data.model.request.LoginRequest
 import com.hrms.clustorcomputing.data.model.response.AuthResponse
 import com.hrms.clustorcomputing.data.model.response.BaseResponse
 import com.hrms.clustorcomputing.utils.SecurePreferences
+import com.hrms.clustorcomputing.utils.saveLastLoginTime
+import com.hrms.clustorcomputing.utils.saveUserId
+import com.hrms.clustorcomputing.utils.saveUserEmail
+import com.hrms.clustorcomputing.utils.saveUserName
+import com.hrms.clustorcomputing.utils.getAccessToken
+import com.hrms.clustorcomputing.utils.saveAccessToken
+import com.hrms.clustorcomputing.utils.clearAll
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
@@ -25,8 +32,15 @@ class AuthRepositoryImpl @Inject constructor(
             if (response.isSuccessful && response.body() != null) {
                 val authResponse = response.body()!!
                 if (authResponse.success) {
-                    authResponse.data?.token?.let { saveUserToken(it) }
+                    authResponse.data?.token?.let { token -> 
+                        saveUserToken(token)
+                        securePreferences.saveLastLoginTime(System.currentTimeMillis())
+                    }
                     authResponse.data?.user?.let { userData ->
+                        // Save user data securely
+                        userData.id?.let { securePreferences.saveUserId(it) }
+                        userData.email?.let { securePreferences.saveUserEmail(it) }
+                        userData.name?.let { securePreferences.saveUserName(it) }
                         // Convert and save user to local database
                         // userDao.insertUser(userData.toUserEntity())
                     }
