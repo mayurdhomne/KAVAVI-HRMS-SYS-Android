@@ -2,21 +2,51 @@ package com.hrms.clustorcomputing.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.hrms.clustorcomputing.R
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
+import com.hrms.clustorcomputing.databinding.ActivitySplashBinding
 import com.hrms.clustorcomputing.ui.auth.LoginActivity
+import com.hrms.clustorcomputing.ui.main.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class SplashActivity : AppCompatActivity() {
+    
+    private lateinit var binding: ActivitySplashBinding
+    private val viewModel: SplashViewModel by viewModels()
+    
     override fun onCreate(savedInstanceState: Bundle?) {
+        val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-
-        // Delay for 3 seconds before navigating to MainActivity
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, LoginActivity::class.java))
+        
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        
+        splashScreen.setKeepOnScreenCondition { true }
+        
+        initializeApp()
+    }
+    
+    private fun initializeApp() {
+        lifecycleScope.launch {
+            // Show splash screen for minimum 2 seconds
+            delay(2000)
+            
+            // Check if user is logged in
+            val isLoggedIn = viewModel.isUserLoggedIn()
+            
+            val intent = if (isLoggedIn) {
+                Intent(this@SplashActivity, MainActivity::class.java)
+            } else {
+                Intent(this@SplashActivity, LoginActivity::class.java)
+            }
+            
+            startActivity(intent)
             finish()
-        }, 3000)
+        }
     }
 }

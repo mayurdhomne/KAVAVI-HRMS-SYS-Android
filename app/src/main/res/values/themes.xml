@@ -27,5 +27,14 @@
         <item name="cornerSize">24dp</item>
     </style>
 
+    <style name="BottomNavigationActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/primary_color</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.BottomNavigationView.ActiveIndicator</item>
+    </style>
+
+    <style name="ShapeAppearance.BottomNavigationView.ActiveIndicator" parent="ShapeAppearance.Material3.Corner.Full">
+        <item name="cornerSize">50%</item>
+    </style>
+
     <style name="Theme.ClustorComputing" parent="Base.Theme.ClustorComputing" />
 </resources>

@@ -1,17 +1,33 @@
 [versions]
-agp = "8.11.0"
+agp = "8.7.3"
 coreSplashscreen = "1.0.1"
-kotlin = "2.0.21"
+kotlin = "2.2.0"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-appcompat = "1.7.0"
+appcompat = "1.7.1"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
-navigationFragmentKtx = "2.6.0"
-navigationUiKtx = "2.6.0"
+navigationFragmentKtx = "2.9.1"
+navigationUiKtx = "2.9.1"
+retrofit = "3.0.0"
+okhttp = "5.1.0"
+gson = "2.13.1"
+room = "2.7.2"
+lifecycle = "2.9.1"
+coroutines = "1.10.2"
+biometric = "1.1.0"
+playServicesLocation = "21.3.0"
+playServicesMaps = "19.2.0"
+cameraX = "1.4.2"
+glide = "4.16.0"
+workManager = "2.10.2"
+security = "1.0.0"
+datastore = "1.1.7"
+hilt = "2.56.2"
+hiltAndroid = "2.56.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,7 +42,56 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 
+# Networking
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+
+# Room Database
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+# Lifecycle & ViewModels
+lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+
+# Coroutines
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+
+# Biometric
+biometric = { group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
+
+# Location Services
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+
+# CameraX
+camerax-core = { group = "androidx.camera", name = "camera-core", version.ref = "cameraX" }
+camerax-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraX" }
+camerax-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraX" }
+camerax-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraX" }
+
+# Image Loading
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+
+# WorkManager
+work-runtime = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workManager" }
+
+# Security & Encrypted Storage
+security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "security" }
+datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+
+# Dependency Injection
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroid" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

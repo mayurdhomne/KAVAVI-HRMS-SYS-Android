@@ -3,8 +3,36 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- App Primary Colors -->
+    <color name="primary_color">#f97d2c</color>
+    <color name="primary_dark">#b25727</color>
+    <color name="accent_color">#384454</color>
+    
+    <!-- Legacy colors for backward compatibility -->
     <color name="colorAccent">#384454</color>
     <color name="colorPrimary">#f97d2c</color>
     <color name="colorPrimaryDark">#b25727</color>
+
+    <!-- Additional colors for the app -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_dark">#121212</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="text_primary_light">#212121</color>
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_light">#757575</color>
+    <color name="text_secondary_dark">#B0B0B0</color>
+    
+    <!-- Status colors -->
+    <color name="success_color">#4CAF50</color>
+    <color name="error_color">#F44336</color>
+    <color name="warning_color">#FF9800</color>
+    <color name="info_color">#2196F3</color>
+    
+    <!-- Attendance status colors -->
+    <color name="present_color">#4CAF50</color>
+    <color name="absent_color">#F44336</color>
+    <color name="late_color">#FF9800</color>
+    <color name="half_day_color">#9C27B0</color>
 
 </resources>
