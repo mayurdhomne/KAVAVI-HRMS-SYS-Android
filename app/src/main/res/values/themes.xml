@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ClustorComputing" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <!-- Customize your light theme here. -->
+        <!-- Remove or override the colorPrimary if it's not needed -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Set Background Color -->
+        <item name="android:windowBackground">@android:color/white</item> <!-- Change to desired color -->
+
+        <!-- Set Status Bar Color -->
+        <item name="android:statusBarColor">@color/colorAccent</item>
+
+        <!-- Optional: Set Navigation Bar Color -->
+        <item name="android:navigationBarColor">@color/colorAccent</item>
+    </style>
+
+    <style name="BottomSheetTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="shapeAppearanceOverlay">@style/CustomBottomSheetShape</item>
+    </style>
+
+    <style name="CustomBottomSheetShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="Theme.ClustorComputing" parent="Base.Theme.ClustorComputing" />
+</resources>
