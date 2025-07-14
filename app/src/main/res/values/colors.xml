@@ -51,6 +51,16 @@
     <!-- UI element colors -->
     <color name="divider_color">#E0E0E0</color>
     <color name="ripple_color">#1F000000</color>
+    <color name="ripple_light">#1F000000</color>
     <color name="camera_controls_background">#80000000</color>
+    
+    <!-- Additional theme colors -->
+    <color name="primary_variant_color">#D4691F</color>
+    <color name="button_text_primary">#FFFFFF</color>
+    <color name="button_text_secondary">#FFFFFF</color>
+    <color name="text_hint_light">#9E9E9E</color>
+    <color name="text_hint">#9E9E9E</color>
+    <color name="navigation_background">#FFFFFF</color>
+    <color name="card_background">@color/surface_light</color>
 
 </resources>

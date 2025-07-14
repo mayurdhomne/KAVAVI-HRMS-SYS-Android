@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
         setupClickListeners()
         checkBiometricAvailability()
     }
-    
+
     private fun setupUI() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.statusBarColor = resources.getColor(R.color.primary_color, theme)
@@ -77,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
         
         binding.forgotPasswordText.setOnClickListener {
             // Handle forgot password
-            Toast.makeText(this, "Forgot password feature coming soon", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.forgot_password_coming_soon), Toast.LENGTH_SHORT).show()
         }
     }
     
@@ -96,12 +96,12 @@ class LoginActivity : AppCompatActivity() {
         
         // Basic validation
         if (email.isEmpty()) {
-            binding.emailInputLayout.error = "Email is required"
+            binding.emailInputLayout.error = getString(R.string.email_required)
             return
         }
         
         if (password.isEmpty()) {
-            binding.passwordInputLayout.error = "Password is required"
+            binding.passwordInputLayout.error = getString(R.string.password_required)
             return
         }
         
@@ -117,9 +117,9 @@ class LoginActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val result = biometricManager.authenticateWithBiometric(
                 this@LoginActivity,
-                "Biometric Login",
-                "Use your fingerprint or face to login",
-                "Place your finger on the sensor or look at the camera"
+                getString(R.string.biometric_login),
+                getString(R.string.biometric_login_subtitle),
+                getString(R.string.biometric_login_description)
             )
             
             when (result.status) {
@@ -127,7 +127,7 @@ class LoginActivity : AppCompatActivity() {
                     viewModel.biometricLogin()
                 }
                 else -> {
-                    showError("Biometric authentication failed: ${result.message}")
+                    showError(getString(R.string.biometric_authentication_failed, result.message))
                 }
             }
         }

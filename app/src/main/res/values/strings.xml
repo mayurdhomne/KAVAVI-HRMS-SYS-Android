@@ -1,13 +1,10 @@
 <resources>
-    <string name="app_name">Clustor Computing</string>
+    <string name="app_name">KAVAVVI HRMS</string>
     
     <!-- Authentication -->
     <string name="login">Login</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
     <string name="login_button">Login</string>
-    <string name="forgot_password">Forgot Password?</string>
-    <string name="use_biometric">Use Biometric Login</string>
     <string name="login_with_fingerprint">Login with Fingerprint</string>
     <string name="biometric_authentication">Biometric Authentication</string>
     <string name="authenticate_using_biometric">Authenticate using your fingerprint or face</string>
@@ -158,6 +155,27 @@
     <string name="delete">Delete</string>
     <string name="close">Close</string>
     
+    <!-- Login Strings -->
+    <string name="app_title">Employee Attendance</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or">OR</string>
+    <string name="use_biometric">Use Biometric</string>
+    <string name="biometric_login">Biometric Login</string>
+    <string name="biometric_login_subtitle">Use your fingerprint or face to login</string>
+    <string name="biometric_login_description">Place your finger on the sensor or look at the camera</string>
+    <string name="biometric_authentication_failed">Biometric authentication failed: %s</string>
+    <string name="forgot_password_coming_soon">Forgot password feature coming soon</string>
+    <string name="email_required">Email is required</string>
+    <string name="password_required">Password is required</string>
+    <string name="login_failed">Login failed. Please check your credentials.</string>
+    <string name="login_success">Login successful</string>
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="weak_password">Password must be at least 6 characters</string>
+
     <!-- Error Messages -->
     <string name="error_login_failed">Login failed. Please check your credentials.</string>
     <string name="error_network">Network error. Please check your connection.</string>

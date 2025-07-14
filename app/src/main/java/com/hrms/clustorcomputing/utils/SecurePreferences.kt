@@ -89,3 +89,31 @@ class SecurePreferences @Inject constructor(
         return sharedPreferences.all
     }
 }
+
+// Extension functions for common auth-related preferences
+private const val KEY_ACCESS_TOKEN = "access_token"
+private const val KEY_REFRESH_TOKEN = "refresh_token"
+private const val KEY_USER_ID = "user_id"
+private const val KEY_USER_EMAIL = "user_email"
+private const val KEY_USER_NAME = "user_name"
+private const val KEY_LAST_LOGIN_TIME = "last_login_time"
+
+fun SecurePreferences.saveAccessToken(token: String) = putString(KEY_ACCESS_TOKEN, token)
+fun SecurePreferences.getAccessToken(): String? = getString(KEY_ACCESS_TOKEN).takeIf { it.isNotEmpty() }
+
+fun SecurePreferences.saveRefreshToken(token: String) = putString(KEY_REFRESH_TOKEN, token)
+fun SecurePreferences.getRefreshToken(): String? = getString(KEY_REFRESH_TOKEN).takeIf { it.isNotEmpty() }
+
+fun SecurePreferences.saveUserId(userId: String) = putString(KEY_USER_ID, userId)
+fun SecurePreferences.getUserId(): String? = getString(KEY_USER_ID).takeIf { it.isNotEmpty() }
+
+fun SecurePreferences.saveUserEmail(email: String) = putString(KEY_USER_EMAIL, email)
+fun SecurePreferences.getUserEmail(): String? = getString(KEY_USER_EMAIL).takeIf { it.isNotEmpty() }
+
+fun SecurePreferences.saveUserName(name: String) = putString(KEY_USER_NAME, name)
+fun SecurePreferences.getUserName(): String? = getString(KEY_USER_NAME).takeIf { it.isNotEmpty() }
+
+fun SecurePreferences.saveLastLoginTime(timestamp: Long) = putLong(KEY_LAST_LOGIN_TIME, timestamp)
+fun SecurePreferences.getLastLoginTime(): Long = getLong(KEY_LAST_LOGIN_TIME, 0L)
+
+fun SecurePreferences.clearAll() = clear()

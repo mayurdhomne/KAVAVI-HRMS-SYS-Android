@@ -37,6 +37,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -70,6 +71,7 @@ dependencies {
     // Coroutines
     implementation(libs.coroutines.android)
     implementation(libs.coroutines.core)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.8.1")
 
     // Biometric
     implementation(libs.biometric)
@@ -99,6 +101,7 @@ dependencies {
 
     // Dependency Injection
     implementation(libs.hilt.android)
+    implementation(libs.hilt.work)
     ksp(libs.hilt.compiler)
 
     // Testing

@@ -32,15 +32,15 @@ class AuthRepositoryImpl @Inject constructor(
             if (response.isSuccessful && response.body() != null) {
                 val authResponse = response.body()!!
                 if (authResponse.success) {
-                    authResponse.data?.token?.let { token -> 
+                    authResponse.data?.token?.let { token: String -> 
                         saveUserToken(token)
                         securePreferences.saveLastLoginTime(System.currentTimeMillis())
                     }
                     authResponse.data?.user?.let { userData ->
                         // Save user data securely
-                        userData.id?.let { securePreferences.saveUserId(it) }
-                        userData.email?.let { securePreferences.saveUserEmail(it) }
-                        userData.name?.let { securePreferences.saveUserName(it) }
+                        userData.id?.let { id: String -> securePreferences.saveUserId(id) }
+                        userData.email?.let { email: String -> securePreferences.saveUserEmail(email) }
+                        userData.name?.let { name: String -> securePreferences.saveUserName(name) }
                         // Convert and save user to local database
                         // userDao.insertUser(userData.toUserEntity())
                     }

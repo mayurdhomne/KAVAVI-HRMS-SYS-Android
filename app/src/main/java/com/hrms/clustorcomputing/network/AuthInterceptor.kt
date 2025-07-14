@@ -19,7 +19,7 @@ class AuthInterceptor @Inject constructor(
         val accessToken = securePreferences.getAccessToken()
         
         // If no token or this is an auth endpoint, proceed without token
-        if (accessToken.isNullOrEmpty() || isAuthEndpoint(originalRequest.url.encodedPath)) {
+        if (accessToken == null || accessToken.isEmpty() || isAuthEndpoint(originalRequest.url.encodedPath)) {
             return chain.proceed(originalRequest)
         }
         

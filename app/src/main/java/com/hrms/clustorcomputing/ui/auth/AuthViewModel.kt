@@ -35,7 +35,8 @@ class AuthViewModel @Inject constructor(
                 email = email,
                 password = password,
                 deviceId = "android_device", // Get actual device ID
-                fcmToken = null // Get FCM token if available
+                deviceName = android.os.Build.MODEL,
+                rememberMe = false
             )
             
             authRepository.login(loginRequest).collect { result ->

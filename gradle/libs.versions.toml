@@ -26,9 +26,10 @@ cameraX = "1.4.2"
 glide = "4.16.0"
 swiperefreshlayout = "1.1.0"
 workManager = "2.10.2"
-security = "1.0.0"
+security = "1.1.0-alpha06"
 datastore = "1.1.7"
 hilt = "2.52"
+hiltWork = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -91,6 +92,7 @@ datastore-preferences = { group = "androidx.datastore", name = "datastore-prefer
 # Dependency Injection
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltWork" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
